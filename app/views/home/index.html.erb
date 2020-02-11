@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<div class="container-fluid p-4" style="height: 300px">
+	<h1 class="text-center mb-5">TOUS LES GOSSIPS</h1>
+	<a href="<%= new_gossip_path %>" class="btn btn-info, text-white bg-dark"> Création d'un new Gossip </a>
+	<div class="row justify-content-around align-items-center">
+		<% @gossip_arr.each do |gossip| %>
+			<div class="col-md-3">
+				<div class="card text-center m-2">
+					<div class="card-header">
+						<%= link_to "#{gossip.title}", gossip_path(gossip.id) %>
+					</div>
+					<div class="card-body">
+						<p class="card-text"><%= gossip.content %></p>
+						<div class="btn btn-info, text-white bg-dark">by <%=link_to "#{gossip.user.first_name}", user_path(gossip.user_id)%> </div>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
