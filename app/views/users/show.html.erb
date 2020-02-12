@@ -1,5 +1,19 @@
-<h1>User <%= @user.id %></h1>
 
-<h3><%= @user.first_name %> <%= @user.last_name%> </h3>
-<p> City : <%= @user.city.name %> </p>
-<p> Description : <%= @user.desc %> </p>
+<div class="container-fluid p-4" style="height: 300px">
+  <h1 class="text-center mb-5"> </h1>
+  <div class="row justify-content-around align-items-center">
+      <div class="col-md-3">
+        <div class="card text-center m-2">
+          <div class="card-header">
+            <p> <%= @user.first_name %>  <%= @user.last_name %> </p>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Description vide ...<%= @user.desc %></p>
+            <p class="card-text"> Adresse mail : <br /> <%= @user.email %></p>
+            <p class="card-text"> Age : <%= @user.age %></p>
+            <p class="card-text"> Ville : <%= @user.city.name %></p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<p>City_id -> <%= @cities.id %></p>
+
+
+<div class="container-fluid p-4" style="height: 300px">
+  <h1 class="text-center mb-5"> <%= @cities.name %> </h1>
+  <div class="row justify-content-around align-items-center">
+    <% @gosspis_city.each do |city_gossips|  %>
+      <div class="col-md-3">
+        <div class="card text-center m-2">
+          <div class="card-header">
+            <%= city_gossips.title  %>
+          </div>
+          <div class="card-body">
+            <p class="card-text"><%= city_gossips.content %></p>
+            <p class="card-text"><%= city_gossips.user.first_name %></p>
+
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
