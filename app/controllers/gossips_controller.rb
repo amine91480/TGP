@@ -14,9 +14,10 @@ class GossipsController < ApplicationController
     @gossip = Gossip.new
     @gossip.title = params[:title]
     @gossip.content = params[:content]
-    @gossip.user = User.all.last
+    @gossip.user = User.find_by(id: session[:user_id])
     @gossip.city = City.all.first
     if @gossip.save
+      puts "Potin add !"
       redirect_to root_path
     else
      render "gossips/new"

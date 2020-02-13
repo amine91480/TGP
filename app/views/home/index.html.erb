@@ -3,6 +3,7 @@
 
 <div class="container-fluid p-4" style="height: 300px">
 	<h1 class="text-center mb-5">TOUS LES GOSSIPS</h1>
+	<h2>Bienvenue <%= User.find_by(id: session[:user_id]).email %> !</h2>
 	<a href="<%= new_gossip_path %>" class="btn btn-info, text-white bg-dark"> Création d'un new Gossip </a>
 	<div class="row justify-content-around align-items-center">
 		<% @gossip_arr.each do |gossip| %>
