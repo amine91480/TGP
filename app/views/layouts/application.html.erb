@@ -25,18 +25,21 @@
         <li class="nav-item active">
           <a class="nav-link" href="/"> Accueil <span class="sr-only">(current)</span></a>
         </li>
-       <li>
+       <li class="nav-item active">
+         <%= link_to "Sign-In", new_user_path, class: "nav-link" %>
+       </li>
+      <li>
          <%= link_to "User", users_path, class: "nav-link" %>
-       </li>
-       <li>
-         <%= link_to "City", cities_path, class: "nav-link" %>
-       </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/team">L'équipe</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
+      </li>
+<!--       <li>-->
+         <%#= link_to "City", cities_path, class: "nav-link" %>
+<!--       </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" href="/team">L'équipe</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" href="/contact">Contact</a>-->
+<!--        </li>-->
 
       </ul>
     
@@ -44,13 +47,13 @@
 </nav>
 
   <%= yield %>
-<footer class="fixed-bottom">
+<!--<footer class="fixed-bottom">-->
   
-<nav class="navbar fixed-bottom navbar-light bg-light">
-  <a class="navbar-brand" href="https://github.com/axaidan/TGP_2.git">GitHub Axel Aidan</a>
-</nav>
-
+<!--<nav style="margin-top: 15px" class="navbar fixed-bottom navbar-light bg-light">-->
+<!--  <a class="navbar-brand" href="https://github.com/axaidan/TGP_2.git">GitHub Axel Aidan</a>-->
+<!--</nav>-->
+<!--</footer>-->
   </div>
-</footer>
+
   </body>
 </html>

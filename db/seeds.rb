@@ -11,14 +11,16 @@ Gossip.destroy_all
 City.destroy_all
 
 #SEED CITY
-5.times do
-	City.create(name: Faker::Address.city, zip_code: rand(10000..99999).to_s)
-end
+
+	City.create(name: "Paris", zip_code: "75000")
+	City.create(name:"Marseille", zip_code: "13000")
+	City.create(name:"Lyon", zip_code: "69000")
+
 
 #SEED USER
 10.times do 
 	prenom = Faker::Name.first_name
-	User.create(first_name: prenom, last_name: Faker::Name.last_name, email: Faker::Internet.email(name: prenom), age: rand(14..70), city: City.all[rand(0..4)])
+	User.create(first_name: prenom, last_name: Faker::Name.last_name, email: Faker::Internet.email(name: prenom), age: rand(14..70), city: City.all[rand(0..2)], password_digest:Faker::Internet.email(name: prenom))
 end
 
 #SEED GOSSIP
