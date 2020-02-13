@@ -15,8 +15,9 @@ class UsersController < ApplicationController
     @user = User.new
     @user.first_name = params[:first_name]
     @user.last_name = params[:last_name]
+    @user.city_id = 24
     @user.email = params[:email]
-    @user.password_digest = params[:password]
+    @user.password = params[:password]
 
     puts @user.inspect
     if @user.save

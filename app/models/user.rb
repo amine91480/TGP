@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_secure_password
 	#NAMES & AGE
 	# validates :first_name, presence: true
 	# validates :last_name, presence: true
@@ -17,5 +18,5 @@ class User < ApplicationRecord
 	belongs_to :city
 
 	# GEM QUI PERMET DE CRYPTER LE MOT DE PASSE
-	has_secure_password
+
 end
