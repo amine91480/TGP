@@ -34,6 +34,8 @@
      <li>
          <%= link_to "Connexion", new_session_path, class: "nav-link" %>
      </li>
+       <%= link_to "Se déconnecter", session_path(session.id), method: :delete %>
+       </li>
 <!--        <li class="nav-item">-->
 <!--          <a class="nav-link" href="/team">L'équipe</a>-->
 <!--        </li>-->
@@ -45,6 +47,7 @@
     
   </div>
 </nav>
+    <p class="text-center">SESSION EN COURS : <%= session[:user_id] %></p>
 
   <%= yield %>
 <!--<footer class="fixed-bottom">-->
