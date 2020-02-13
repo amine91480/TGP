@@ -8,7 +8,8 @@
       <div class="col-md-3">
         <div class="card text-center m-2">
           <div class="card-header">
-            <%= city_gossips.title  %>
+            <%=  link_to "#{city_gossips.title}", gossip_path(city_gossips.id) %>
+
           </div>
           <div class="card-body">
             <p class="card-text"><%= city_gossips.content %></p>
