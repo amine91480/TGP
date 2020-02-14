@@ -1,17 +1,29 @@
-<html>
-<body>
+
+<div class="container-fluid p-4" style="height: 300px">
+  <h1 class="text-center mb-5"> </h1>
+  <div class="row justify-content-around align-items-center">
+    <div class="col-md-3">
+      <div class="card text-center m-2">
+        <div class="card-header">
+          <h3> Gossips Création </h3>
+        </div>
+        <div class="card-body">
+          <%= form_tag url_for(action: 'create'), method: "post" do %>
 
 
-<%= form_tag url_for(action: 'create'), method: "post" do %>
-  <%= label_tag 'Title' %>
-  <%= text_field_tag 'title' %>
+            <%= text_field_tag :title, params[:title], class: 'form-control', placeholder: 'title'  %>
 
-  <%= label_tag 'Content' %> 
-  <%= text_field_tag 'content' %>
-  
-  <%= submit_tag "Create_Gossip" %>
-  
-  <% end %>
+              <%= password_field_tag :content, params[:content], class: 'form-control', placeholder: 'content' %>
 
-</body>
-</html>
+            <br />
+            <%= submit_tag "Création ", {:class =>  'btn btn-info'}%>
+
+
+          <% end %>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -28,11 +28,16 @@
       <li>
          <%= link_to "User", users_path, class: "btn btn-link" %>
       </li>
-     <li>
+
+       <% if session[:user_id]  %>
+         <%= link_to "Se déconnecter", session_path(session.id), method: :delete, class: "nav-link", class: "btn btn-danger"  %>
+         </li>
+         <%else %>
+         <li>
          <%= link_to "Connexion", new_session_path, class: "btn btn-primary" %>
-     </li>
-       <%= link_to "Se déconnecter", session_path(session.id), method: :delete, class: "nav-link", class: "btn btn-danger"  %>
-       </li>
+         </li>
+         <% end %>
+
 <!--        <li class="nav-item">-->
 <!--          <a class="nav-link" href="/team">L'équipe</a>-->
 <!--        </li>-->
@@ -44,7 +49,11 @@
     
   </div>
 </nav>
-    <p class="text-center">SESSION EN COURS : <%= session[:user_id] %></p>
+    <% if session[:user_id]  %>
+    <div style="text-align: center" class="nav-item active">
+     SESSION EN COURS : <%= session[:user_id]%>
+    </div>
+    <% end %>
 
   <%= yield %>
 <!--<footer class="fixed-bottom">-->

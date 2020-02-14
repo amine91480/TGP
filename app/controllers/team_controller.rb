@@ -1,6 +1,6 @@
 class TeamController < ApplicationController
 
-  def presentation
+  def index
     puts "PRESENTATION DANS TEAM CONTROLLER"
   end
 end

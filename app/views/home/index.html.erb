@@ -2,6 +2,9 @@
 
 
 <div class="container-fluid p-4" style="height: 300px">
+  <%  if flash[:succes] %>
+    <p class="alert alert-success" style="text-align: center"> <%= flash[:succes]  %></p>
+  <% end %>
 	<h1 class="text-center mb-5">TOUS LES GOSSIPS</h1>
 	<a href="<%= new_gossip_path %>" class="list-group-item active" style="text-align: center"> Création d'un new Gossip en cliquant ici  </a>
 	<div class="row justify-content-around align-items-center">
