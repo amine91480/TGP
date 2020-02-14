@@ -11,17 +11,18 @@
         <div class="card-body">
           <%= form_tag url_for(action: 'create'), method: "post" do %>
 
-            <p class="card-text">
-              <%= label_tag 'Email' %>
-              <%= text_field_tag 'email' %>
-            </p>
+
+              <%=  label_tag 'Email' %>
+              <%= text_field_tag :email, params[:email], class: 'form-control', placeholder: 'email'  %>
+
 
             <p type="password" class="card-text">
               <%= label_tag 'Password' %>
-              <%= password_field_tag 'password' %>
+              <%= password_field_tag :password, params[:password], class: 'form-control', placeholder: 'password' %>
             </p>
 
-            <p><%= submit_tag "Creating account" %> </p>
+            <%= submit_tag "Connexion ", {:class =>  'btn btn-info'}%>
+
 
           <% end %>
           </p>

@@ -8,14 +8,13 @@
       <div class="col-md-3">
         <div class="card text-center m-2">
           <div class="card-header">
-            <%= link_to "#{user.first_name} #{user.id}", user_path(user.id), class: "nav-link" %>
+            <%= link_to "#{user.first_name} #{user.last_name }", user_path(user.id), class: "nav-link" %>
           </div>
           <div class="card-body">
-            <p class="card-text"><%= user.last_name %></p>
-         <!--   <p class="card-text">Description vide ...<%#= user.desc %></p>
-            <p class="card-text"> Adresse mail : <br /><%#= user.email %></p>
-            <p class="card-text"> Age : <%#= user.age %></p>
-            <p class="card-text"> Ville : <%#= link_to "#{user.city.name}", cities_path %> </p>-->
+            <p class="card-text">Description vide ...<%= user.desc %></p>
+            <p class="card-text"> Adresse mail : <br /><%= user.email %></p>
+            <p class="card-text"> Age : <%= user.age %></p>
+            <p class="card-text"> Ville : <%= link_to "#{user.city.name}", cities_path %> </p>
           </div>
         </div>
       </div>

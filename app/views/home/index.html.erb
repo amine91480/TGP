@@ -3,8 +3,7 @@
 
 <div class="container-fluid p-4" style="height: 300px">
 	<h1 class="text-center mb-5">TOUS LES GOSSIPS</h1>
-	<h2>Bienvenue  !</h2>
-	<a href="<%= new_gossip_path %>" class="btn btn-info, text-white bg-dark"> Création d'un new Gossip </a>
+	<a href="<%= new_gossip_path %>" class="list-group-item active" style="text-align: center"> Création d'un new Gossip en cliquant ici  </a>
 	<div class="row justify-content-around align-items-center">
 		<% @gossip_arr.each do |gossip| %>
 			<div class="col-md-3">
